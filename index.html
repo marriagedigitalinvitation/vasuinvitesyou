@@ -6,40 +6,72 @@
 <title>शुभ विवाह - Miss Vasundhara Kumari ❤️ Abhishek Kumar Sah</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root { --pink-royal:#7b003a; --pink-deep:#9c0d4b; --pink-bright:#ad1457; --gold:#d4af37; --gold-light:#ffeb99; --gold-dark:#8c6200; }
+:root { --pink-royal:#7b003a; --pink-deep:#9c0d4b; --pink-bright:#ad1457; --pink-soft:#fff0f5; --gold:#d4af37; --gold-light:#ffeb99; --gold-dark:#8c6200; --text-dark:#2c0014; }
 * { margin:0; padding:0; box-sizing:border-box; }
-html, body { width:100%; min-height:100%; background:radial-gradient(circle at center, #6a0032 0%, #380018 60%, #1f000d 100%); color:#2c0014; font-family:'Noto Sans Devanagari','Poppins',sans-serif; font-size:13.5px; text-align:center; overflow-x:hidden; scroll-behavior:smooth; }
+html, body { width:100%; min-height:100%; background:radial-gradient(circle at center, #6a0032 0%, #380018 60%, #1f000d 100%); color:var(--text-dark); font-family:'Noto Sans Devanagari','Poppins',sans-serif; font-size:13.5px; text-align:center; overflow-x:hidden; scroll-behavior:smooth; }
 body.locked { overflow:hidden; height:100vh; }
-button { cursor:pointer; font-family:inherit; outline:none; }
-#doors-screen { position:fixed; inset:0; width:100%; height:100%; z-index:9999; display:flex; perspective:1600px; }
-.door { width:50%; height:100%; background:linear-gradient(135deg, #9c0d4b 0%, #6a0032 55%, #2a0015 100%); border:5px solid var(--gold); transition:transform 2.2s ease; }
+button { cursor:pointer; font-family:inherit; outline:none; -webkit-tap-highlight-color:transparent; }
+#sparkle-canvas { position:fixed; inset:0; width:100%; height:100%; pointer-events:none; z-index:1; }
+#doors-screen { position:fixed; inset:0; width:100%; height:100%; z-index:9999; display:flex; perspective:1600px; background:transparent; }
+.door { width:50%; height:100%; background:radial-gradient(circle at center, rgba(255,215,0,0.22) 0%, transparent 65%), repeating-linear-gradient(45deg, rgba(212,175,55,0.06) 0px, rgba(212,175,55,0.06) 2px, transparent 2px, transparent 14px), linear-gradient(135deg, #9c0d4b 0%, #6a0032 55%, #2a0015 100%); border:5px solid var(--gold); display:flex; flex-direction:column; align-items:center; justify-content:center; transition:transform 2.2s cubic-bezier(0.68,-0.05,0.26,1.05); box-shadow:inset 0 0 50px rgba(0,0,0,0.85); backface-visibility:hidden; }
 .door-left { transform-origin:left center; border-right:3px solid var(--gold-light); }
 .door-right { transform-origin:right center; border-left:3px solid var(--gold-light); }
 #doors-screen.open .door-left { transform:rotateY(-110deg); }
 #doors-screen.open .door-right { transform:rotateY(110deg); }
-#door-center-box { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10001; width:88%; max-width:340px; background:#5a002c; border:2.5px solid var(--gold-light); border-radius:22px; padding:22px 16px; color:#fff; box-shadow:0 0 35px rgba(255,215,0,0.6); transition:opacity 0.4s ease; }
-#open-btn { background:linear-gradient(45deg, #d4af37, #fff6b5); color:#3b001b; border:2px solid #fff; border-radius:50px; padding:10px 26px; font-size:15px; font-weight:700; margin-top:10px; }
-#main-content { max-width:580px; margin:0 auto; padding:14px 10px 45px 10px; }
-.royal-page-card { background:radial-gradient(circle at top, #ffffff 0%, #fff4f8 70%, #ffe9f2 100%); border:3px solid var(--gold); border-radius:20px; padding:18px 14px; margin-bottom:16px; box-shadow:0 10px 28px rgba(0,0,0,0.45); overflow:hidden; }
-.seq-step { opacity:0; transform:translateY(16px); transition:all 0.6s ease; }
-.seq-step.show { opacity:1; transform:translateY(0); }
-.ganesh-auto-box { width:5cm; height:5cm; max-width:130px; max-height:130px; margin:8px auto; border-radius:50%; border:3px solid var(--gold); overflow:hidden; background:#fff; display:flex; align-items:center; justify-content:center; padding:4px; box-shadow:0 0 15px rgba(212,175,55,0.75); }
-.om-image { width:100%; height:100%; border-radius:50%; object-fit:contain; }
-.mantra-box { background:#ffeef4; border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-right:4px solid var(--pink-bright); padding:8px; margin:8px auto; border-radius:10px; font-size:12.5px; line-height:1.6; color:var(--pink-royal); font-weight:600; }
-.profile-img-box { width:110px; height:110px; margin:8px auto; border-radius:50%; border:3px solid var(--gold); overflow:hidden; background:#fff0f5; }
-.profile-img { width:100%; height:100%; object-fit:cover; }
-.detail-pill { background:#fff; border:1px solid var(--gold); border-radius:10px; padding:8px 10px; margin:6px auto; font-size:12.5px; line-height:1.55; }
-.event-card { background:#fff; border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-radius:10px; padding:9px 12px; margin:7px auto; text-align:left; }
-.event-name { font-size:13.5px; color:var(--pink-royal); font-weight:700; }
-.event-date { font-size:12px; color:#5d2a42; }
+.door-knocker { width:60px; height:60px; border:3px solid var(--gold-light); border-radius:50%; box-shadow:0 0 20px rgba(255,215,0,0.7), inset 0 0 12px rgba(255,215,0,0.5); display:flex; align-items:center; justify-content:center; font-size:26px; color:var(--gold-light); margin-bottom:170px; background:rgba(42,0,21,0.75); }
+#door-center-box { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10001; width:88%; max-width:350px; background:radial-gradient(circle, #7b003a 0%, #2a0015 100%); border:2.5px solid var(--gold-light); outline:1.5px dashed var(--gold); outline-offset:-7px; border-radius:24px; padding:24px 16px; color:#fff; box-shadow:0 0 40px rgba(255,215,0,0.65), 0 12px 30px rgba(0,0,0,0.85); transition:opacity 0.4s ease; }
+.shimmer-gold { background:linear-gradient(90deg, #d4af37 0%, #fffbcf 35%, #d4af37 70%, #fffbcf 100%); background-size:200% auto; -webkit-background-clip:text; -webkit-text-fill-color:transparent; animation:goldShine 3.5s linear infinite; }
+@keyframes goldShine { to { background-position:200% center; } }
+#open-btn { background:linear-gradient(45deg, #d4af37, #fff6b5, #c59b27); color:#3b001b; border:2px solid #fff; border-radius:50px; padding:11px 28px; font-size:16px; font-weight:700; margin-top:8px; box-shadow:0 0 25px rgba(255,215,0,0.9); }
+#main-content { position:relative; z-index:5; width:100%; max-width:580px; margin:0 auto; padding:14px 10px 45px 10px; }
+.royal-page-card { background:radial-gradient(circle at top, #ffffff 0%, #fff4f8 70%, #ffe9f2 100%); border:3px solid var(--gold); border-radius:22px; padding:20px 14px; margin-bottom:18px; box-shadow:0 12px 32px rgba(0,0,0,0.5); position:relative; overflow:hidden; }
+.royal-page-card::before { content:""; position:absolute; inset:7px; border:1px solid rgba(156,13,75,0.3); border-radius:16px; pointer-events:none; }
+.toran-bar { width:calc(100% + 28px); margin:-20px -14px 16px -14px; background:linear-gradient(180deg, #6a0032 0%, #9c0d4b 100%); border-bottom:2.5px solid var(--gold); padding:7px 4px; font-size:14px; letter-spacing:3px; }
+.seq-step { opacity:0; transform:translateY(18px); transition:all 0.65s ease; } .seq-step.show { opacity:1; transform:translateY(0); }
+#guest-greeting { background:linear-gradient(135deg, #7b003a 0%, #ad1457 100%); border:2px solid var(--gold); border-radius:15px; padding:12px 10px; margin:2px auto 14px auto; color:#fff; }
+#guest-name-display { display:block; font-size:19px; font-weight:700; margin:3px 0; color:var(--gold-light); }
+.ring-avatar-wrap { position:relative; width:152px; height:152px; margin:10px auto 12px auto; display:flex; align-items:center; justify-content:center; }
+.ring-avatar-wrap.small-ring { width:112px; height:112px; margin:4px; }
+.spinning-ring-outer { position:absolute; inset:0; border-radius:50%; border:3px dashed var(--gold-dark); box-shadow:0 0 18px rgba(212,175,55,0.7); animation:spinClockwise 12s linear infinite; pointer-events:none; }
+.spinning-ring-inner { position:absolute; inset:6px; border-radius:50%; border:2px dotted var(--pink-bright); animation:spinCounter 8s linear infinite; pointer-events:none; }
+.couple-royal-card .spinning-ring-outer { border-color:var(--gold-light); box-shadow:0 0 20px rgba(255,235,153,0.85); }
+.couple-royal-card .spinning-ring-inner { border-color:#ffffff; }
+@keyframes spinClockwise { 0% { transform:rotate(0deg); } 100% { transform:rotate(360deg); } }
+@keyframes spinCounter { 0% { transform:rotate(360deg); } 100% { transform:rotate(0deg); } }
+.circle-photo-box { width:126px; height:126px; border-radius:50%; border:3px solid var(--gold); background:#fff; overflow:hidden; position:relative; z-index:2; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(0,0,0,0.2); }
+.ring-avatar-wrap.small-ring .circle-photo-box { width:90px; height:90px; border-width:2.5px; }
+.om-image { width:100%; height:100%; border-radius:50%; object-fit:contain; padding:3px; }
+.profile-img { width:100%; height:100%; border-radius:50%; object-fit:cover; }
+.diya-row { display:flex; align-items:center; justify-content:center; gap:10px; margin:6px 0 10px 0; }
+.diya-icon { font-size:20px; display:inline-block; animation:flickerDiya 1.2s infinite alternate; }
+@keyframes flickerDiya { 0% { transform:scale(1) rotate(-3deg); filter:drop-shadow(0 0 5px #ff9800); } 100% { transform:scale(1.14) rotate(3deg); filter:drop-shadow(0 0 14px #ffd700); } }
+.ganesh-title { font-size:16px; color:var(--pink-royal); font-weight:700; }
+.mantra-box { background:rgba(255,238,244,0.95); border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-right:4px solid var(--pink-bright); padding:9px 10px; margin:8px auto; border-radius:10px; font-size:13px; line-height:1.65; color:var(--pink-royal); font-weight:600; }
+.main-heading { color:var(--pink-bright); font-size:24px; font-weight:700; margin:8px 0 2px 0; }
+.subtitle { color:var(--gold-dark); font-size:14px; font-weight:600; margin-bottom:8px; }
+.profile-badge { display:inline-block; background:linear-gradient(45deg, var(--pink-royal), var(--pink-bright)); color:var(--gold-light); padding:4px 18px; border-radius:20px; font-size:13.5px; font-weight:700; margin-bottom:6px; border:1.5px solid var(--gold); }
+.english-name { font-size:18px; font-weight:700; color:var(--pink-royal); }
+.hindi-name { font-size:14px; color:var(--gold-dark); font-weight:600; margin-bottom:6px; }
+.detail-pill { background:#fff; border:1px solid var(--gold); border-radius:10px; padding:9px 12px; margin:7px auto; max-width:96%; font-size:13px; line-height:1.6; color:#3b001b; }
+.couple-royal-card { background:radial-gradient(circle at center, #9c0d4b 0%, #6a0032 70%, #2a0015 100%); color:#fff; border:3px solid var(--gold); }
+.couple-rings-row { display:flex; justify-content:center; align-items:center; gap:8px; margin:12px 0; flex-wrap:wrap; }
+.gathbandhan-heart { font-size:26px; display:inline-block; animation:heartbeat 1.3s infinite; filter:drop-shadow(0 0 10px gold); }
+@keyframes heartbeat { 0%, 100% { transform:scale(1); } 50% { transform:scale(1.25); } }
+.bless-btn { margin-top:10px; background:linear-gradient(45deg, var(--gold), var(--gold-light)); color:#3b001b; border:1.5px solid #fff; padding:8px 20px; border-radius:30px; font-size:13px; font-weight:700; }
+.section-title { color:var(--pink-royal); font-size:18px; font-weight:700; margin-bottom:10px; }
+.event-card { background:#fff; border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-radius:10px; padding:10px 12px; margin:8px auto; max-width:96%; text-align:left; }
+.event-name { font-size:14px; color:var(--pink-royal); font-weight:700; }
+.event-date { font-size:12.5px; color:#5d2a42; margin-top:2px; }
 .timer-container { display:flex; justify-content:center; gap:8px; margin:10px 0; }
-.time-box { background:var(--pink-royal); color:#fff; border:1.5px solid var(--gold); padding:8px 6px; border-radius:10px; min-width:56px; }
-.time-box span { display:block; font-size:18px; font-weight:700; color:var(--gold-light); }
-.btn-call { display:inline-block; background:var(--pink-bright); color:#fff; text-decoration:none; padding:8px 15px; border-radius:30px; font-size:12.5px; font-weight:600; margin:4px; border:none; }
-.btn-whatsapp { display:inline-block; background:#128C7E; color:#fff; text-decoration:none; padding:8px 15px; border-radius:30px; font-size:12.5px; font-weight:600; margin:4px; border:none; }
-.btn-gold { display:inline-block; background:#996515; color:#fff; text-decoration:none; padding:7px 14px; border-radius:30px; font-size:12px; font-weight:600; margin:4px; border:none; }
-.input-field { padding:8px 10px; border:1.5px solid var(--gold); border-radius:8px; width:90%; max-width:260px; font-size:12.5px; text-align:center; margin-bottom:6px; }
-.prefix-chip { background:#fff; border:1px solid var(--gold-dark); color:var(--pink-royal); padding:3px 8px; border-radius:12px; font-size:11px; font-weight:600; margin:2px; }
+.time-box { background:linear-gradient(145deg, var(--pink-royal), #2a0015); color:#fff; border:1.5px solid var(--gold); padding:8px 6px; border-radius:10px; min-width:58px; }
+.time-box span { display:block; font-size:19px; font-weight:700; color:var(--gold-light); }
+.time-label { font-size:11px; color:#ffdce8; }
+.manuhar-box { background:linear-gradient(135deg, #fff5f8, #fffceb); border:1.5px dashed var(--gold-dark); border-radius:12px; padding:12px 10px; margin:10px auto; max-width:96%; font-size:13px; color:var(--pink-royal); font-weight:600; line-height:1.65; }
+.btn-call { display:inline-block; background:var(--pink-bright); color:#fff; text-decoration:none; padding:8px 16px; border-radius:30px; font-size:13px; font-weight:600; margin:4px; border:none; }
+.btn-whatsapp { display:inline-block; background:#128C7E; color:#fff; text-decoration:none; padding:8px 16px; border-radius:30px; font-size:13px; font-weight:600; margin:4px; border:none; }
+.btn-gold { display:inline-block; background:#996515; color:#fff; text-decoration:none; padding:7px 14px; border-radius:30px; font-size:12.5px; font-weight:600; margin:4px; border:none; }
+.input-field { padding:8px 10px; border:1.5px solid var(--gold); border-radius:8px; width:90%; max-width:260px; font-size:13px; text-align:center; margin-bottom:6px; }
+.prefix-chip { background:#fff; border:1px solid var(--gold-dark); color:var(--pink-royal); padding:3px 9px; border-radius:14px; font-size:11.5px; font-weight:600; margin:2px; }
 #client-login-box, #client-share-panel { display:none; background:#fff0f6; border:1.5px solid var(--gold); border-radius:12px; padding:12px 10px; margin:10px auto; max-width:330px; }
 #music-btn { position:fixed; bottom:14px; right:14px; z-index:900; background:var(--pink-bright); color:#fff; border:1.5px solid var(--gold); padding:7px 13px; border-radius:30px; font-size:12px; font-weight:600; display:none; }
 .flower { position:fixed; top:-30px; z-index:9000; pointer-events:none; animation:fall linear forwards; }
@@ -47,94 +79,139 @@ button { cursor:pointer; font-family:inherit; outline:none; }
 </style>
 </head>
 <body class="locked">
+<canvas id="sparkle-canvas"></canvas>
 <div id="doors-screen">
-    <div class="door door-left"></div><div class="door door-right"></div>
+    <div class="door door-left"><div class="door-knocker">⚜️</div></div>
+    <div class="door door-right"><div class="door-knocker">⚜️</div></div>
     <div id="door-center-box">
-        <div style="font-size:26px;">👑</div>
-        <h2 style="color:var(--gold-light); font-size:21px;">॥ शुभ विवाह ॥</h2>
-        <p style="margin:5px 0; font-size:14px; color:#ffe57f;">Miss Vasundhara Kumari & Abhishek Kumar Sah</p>
-        <p id="door-guest-line" style="font-size:12px; color:#fff; margin-bottom:8px;">सप्रेम निमंत्रण</p>
-        <button id="open-btn" type="button">🚪 निमंत्रण खोलें</button>
+        <div style="font-size:28px; margin-bottom:2px;">👑</div>
+        <h2 class="shimmer-gold" style="font-size:22px;">॥ शुभ विवाह ॥</h2>
+        <p style="margin:5px 0; font-size:15px; font-weight:600; color:var(--gold-light);">Miss Vasundhara Kumari & Abhishek Kumar Sah</p>
+        <p id="door-guest-line" style="font-size:12.5px; color:#ffe57f; margin-bottom:10px;">सप्रेम मांगलिक निमंत्रण</p>
+        <button id="open-btn" type="button">🚪 शाही द्वार खोलें</button>
     </div>
 </div>
 <audio id="weddingMusic" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
 <button id="music-btn" type="button">🔊 Music ON</button>
 <main id="main-content">
     <section class="royal-page-card" id="page-1">
-        <div id="guest-greeting" class="seq-step" style="background:var(--pink-royal); color:#fff; padding:10px; border-radius:12px; margin-bottom:10px; border:1.5px solid var(--gold);">
+        <div class="toran-bar">🌼🌿🌺🌿🌼🌿🌺🌿🌼🌿🌺</div>
+        <div id="guest-greeting" class="seq-step">
             <div style="font-size:11.5px; color:var(--gold-light);">✨ सप्रेम सादर आमंत्रण ✨</div>
-            <strong id="guest-name-display" style="font-size:17px; color:#ffeb99;">माननीय अतिथि महोदय</strong>
+            <strong id="guest-name-display" class="shimmer-gold">माननीय अतिथि महोदय</strong>
             <div style="font-size:11.5px; color:#ffeef5;">आप सपरिवार सादर आमंत्रित हैं।</div>
         </div>
-        <div class="ganesh-auto-box seq-step"><img src="om.png" class="om-image" alt="Ganesh"></div>
-        <div class="seq-step" style="font-weight:700; color:var(--pink-royal); font-size:15px; margin:4px 0;">🪔 ॥ श्री गणेशाय नमः ॥ 🪔</div>
+        <div class="seq-step">
+            <div class="ring-avatar-wrap">
+                <div class="spinning-ring-outer"></div>
+                <div class="spinning-ring-inner"></div>
+                <div class="circle-photo-box">
+                    <img src="om.png" class="om-image" alt="Ganesh" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2296%22 fill=%22%23880e4f%22/><text x=%2250%25%22 y=%2258%25%22 font-size=%2280%22 text-anchor=%22middle%22 fill=%22%23ffeb99%22>ॐ</text></svg>';">
+                </div>
+            </div>
+            <div class="diya-row">
+                <span class="diya-icon">🪔</span>
+                <span class="ganesh-title">॥ श्री गणेशाय नमः ॥</span>
+                <span class="diya-icon">🪔</span>
+            </div>
+        </div>
         <div class="mantra-box seq-step">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
         <div class="mantra-box seq-step">॥ मंगलम भगवान विष्णुः मंगलम गरुड़ध्वजः ।<br>मंगलम पुण्डरीकाक्षः मंगलाय तनो हरिः ॥</div>
-        <div class="seq-step"><h1 style="color:var(--pink-bright); font-size:22px; margin-top:6px;">शुभ विवाह</h1><p style="font-size:12.5px; line-height:1.6;">ईश्वर की असीम कृपा एवं बुजुर्गों के आशीर्वाद से हमारे परिवार में शुभ विवाह का पावन अवसर आया है। कृपया सपरिवार पधारकर नवयुगल को आशीर्वाद दें।</p></div>
+        <div class="seq-step">
+            <h1 class="main-heading">शुभ विवाह</h1>
+            <div class="subtitle">मंगलमय निमंत्रण</div>
+            <p style="font-size:13px; line-height:1.65;">ईश्वर की असीम कृपा एवं बुजुर्गों के आशीर्वाद से हमारे परिवार में शुभ विवाह का पावन अवसर आया है। कृपया सपरिवार पधारकर नवयुगल को आशीर्वाद दें।</p>
+        </div>
     </section>
 
     
     <section class="royal-page-card stagger-sec">
-        <h3 class="seq-step" style="color:var(--pink-royal); font-size:15px;">👰 प्रथम परिचय: आयु. वधू (The Bride)</h3>
-        <div class="profile-img-box seq-step"><img src="bride.jpg" class="profile-img" alt="Bride"></div>
-        <div class="seq-step" style="font-size:17px; font-weight:700; color:var(--pink-royal);">Miss Vasundhara Kumari</div>
-        <div class="seq-step" style="font-size:13.5px; color:var(--gold-dark); font-weight:600;">(आयु. वसुंधरा कुमारी)</div>
+        <div class="profile-badge seq-step">👰 प्रथम परिचय: आयु. वधू (The Bride)</div>
+        <div class="ring-avatar-wrap seq-step">
+            <div class="spinning-ring-outer"></div>
+            <div class="spinning-ring-inner"></div>
+            <div class="circle-photo-box">
+                <img src="bride.jpg" class="profile-img" alt="Bride" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2298%22 fill=%22%23fce4ec%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2222%22 text-anchor=%22middle%22 fill=%22%23880e4f%22>Bride</text></svg>';">
+            </div>
+        </div>
+        <div class="seq-step"><div class="english-name">Miss Vasundhara Kumari</div><div class="hindi-name">(आयु. वसुंधरा कुमारी)</div></div>
         <div class="detail-pill seq-step"><strong>👨‍👩‍👧 सुपुत्री:</strong> श्री बिभारंजन प्रसाद एवं श्रीमती पूनम देवी</div>
         <div class="detail-pill seq-step"><strong>🏠 पता:</strong> वार्ड नं. 05, बलथर, पश्चिम चंपारण, बिहार - 845307</div>
     </section>
 
     <section class="royal-page-card stagger-sec">
-        <h3 class="seq-step" style="color:var(--pink-royal); font-size:15px;">🤵 द्वितीय परिचय: चि. वर (The Groom)</h3>
-        <div class="profile-img-box seq-step"><img src="groom.jpg" class="profile-img" alt="Groom"></div>
-        <div class="seq-step" style="font-size:17px; font-weight:700; color:var(--pink-royal);">Abhishek Kumar Sah</div>
-        <div class="seq-step" style="font-size:13.5px; color:var(--gold-dark); font-weight:600;">(चि. अभिषेक कुमार साह)</div>
+        <div class="profile-badge seq-step">🤵 द्वितीय परिचय: चि. वर (The Groom)</div>
+        <div class="ring-avatar-wrap seq-step">
+            <div class="spinning-ring-outer"></div>
+            <div class="spinning-ring-inner"></div>
+            <div class="circle-photo-box">
+                <img src="groom.jpg" class="profile-img" alt="Groom" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2298%22 fill=%22%23fce4ec%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2222%22 text-anchor=%22middle%22 fill=%22%23880e4f%22>Groom</text></svg>';">
+            </div>
+        </div>
+        <div class="seq-step"><div class="english-name">Abhishek Kumar Sah</div><div class="hindi-name">(चि. अभिषेक कुमार साह)</div></div>
         <div class="detail-pill seq-step"><strong>👨‍👩‍👦 सुपुत्र:</strong> श्री सोनालाल साह एवं श्रीमती उमरावती देवी</div>
         <div class="detail-pill seq-step"><strong>🏠 पता:</strong> मौजे, वार्ड नं. 13, माई स्थान रोड, रक्सौल, पूर्वी चंपारण, बिहार - 845305</div>
     </section>
 
-    <section class="royal-page-card stagger-sec" id="couple-together" style="background:radial-gradient(circle, #9c0d4b 0%, #4a0022 100%); color:#fff;">
-        <p class="seq-step" style="color:var(--gold-light); font-size:13px;">✨ जन्म-जन्मांतर का पावन गठबंधन ✨</p>
-        <div class="seq-step" style="display:flex; justify-content:center; align-items:center; gap:12px; margin:10px 0;">
-            <img src="bride.jpg" style="width:78px; height:78px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold-light);">
-            <span style="font-size:24px;">❤️</span>
-            <img src="groom.jpg" style="width:78px; height:78px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold-light);">
+    <section class="royal-page-card couple-royal-card stagger-sec" id="couple-together">
+        <p class="seq-step" style="color:var(--gold-light); font-size:14px; font-weight:600;">✨ जन्म-जन्मांतर का पावन गठबंधन ✨</p>
+        <div class="couple-rings-row seq-step">
+            <div class="ring-avatar-wrap small-ring">
+                <div class="spinning-ring-outer"></div>
+                <div class="spinning-ring-inner"></div>
+                <div class="circle-photo-box">
+                    <img src="bride.jpg" class="profile-img" alt="1st" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23fff0f5%22/><text x=%2250%25%22 y=%2258%25%22 font-size=%2226%22 text-anchor=%22middle%22>🤵</text></svg>';">
+                </div>
+            </div>
+            <span class="gathbandhan-heart">❤️</span>
+            <div class="ring-avatar-wrap small-ring">
+                <div class="spinning-ring-outer"></div>
+                <div class="spinning-ring-inner"></div>
+                <div class="circle-photo-box">
+                    <img src="groom.jpg" class="profile-img" alt="2nd" onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23fff0f5%22/><text x=%2250%25%22 y=%2258%25%22 font-size=%2226%22 text-anchor=%22middle%22>👰</text></svg>';">
+                </div>
+            </div>
         </div>
-        <div class="seq-step" style="font-size:18px; font-weight:700; color:var(--gold-light);">Miss Vasundhara Kumari & Abhishek Kumar Sah</div>
-        <button type="button" id="bless-btn" class="btn-gold" style="margin-top:8px;">🌸 पुष्प वर्षा करें 🌸</button>
+        <div class="seq-step">
+            <div class="shimmer-gold" style="font-size:19px; font-weight:700;">Miss Vasundhara Kumari & Abhishek Kumar Sah</div>
+            <button type="button" id="bless-btn" class="bless-btn">🌸 पुष्प वर्षा करें 🌸</button>
+        </div>
     </section>
 
     <section class="royal-page-card stagger-sec">
-        <h3 class="seq-step" style="color:var(--pink-royal); font-size:16px; margin-bottom:8px;">🌸 मांगलिक कार्यक्रम 🌸</h3>
+        <h2 class="section-title seq-step">🌸 मांगलिक कार्यक्रम 🌸</h2>
         <div class="event-card seq-step"><div class="event-name">🚩 अष्टयाम</div><div class="event-date">📅 सोमवार, 30 दिसंबर 2026</div></div>
 <div class="event-card seq-step"><div class="event-name">📖 कथा एवं मटकोर</div><div class="event-date">📅 मंगलवार, 01 दिसंबर 2026</div></div>
 <div class="event-card seq-step"><div class="event-name">💍 शुभ विवाह</div><div class="event-date">📅 बुधवार, 02 दिसंबर 2026</div></div>
-        <div class="detail-pill seq-step" style="background:#fff5f8;">
-            <strong style="color:var(--pink-royal);">📍 विवाह स्थल:</strong><br>राम जानकी मंदिर, रक्सौल (Ramjanki Mandir, Raxaul)<br>
-            <a href="https://www.google.com/maps/search/?api=1&query=%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A5%80%20%E0%A4%AE%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%B0%2C%20%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%8C%E0%A4%B2%20(Ramjanki%20Mandir%2C%20Raxaul)" target="_blank" class="btn-gold" style="margin-top:6px;">🗺️ Google Maps</a>
+        <div class="detail-pill seq-step" style="background:#fff5f8; margin-top:10px;">
+            <strong style="color:var(--pink-royal); font-size:14px;">📍 विवाह स्थल (Venue):</strong><br>
+            <span style="font-size:15px; font-weight:700; color:var(--pink-deep);">राम जानकी मंदिर, रक्सौल (Ramjanki Mandir, Raxaul)</span><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A5%80%20%E0%A4%AE%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%B0%2C%20%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%8C%E0%A4%B2%20(Ramjanki%20Mandir%2C%20Raxaul)" target="_blank" rel="noopener" class="btn-gold" style="margin-top:6px;">🗺️ Google Maps</a>
         </div>
     </section>
 
     <section class="royal-page-card stagger-sec">
-        <h3 class="seq-step" style="color:var(--pink-royal); font-size:16px;">⏳ शुभ विवाह में शेष समय</h3>
+        <h2 class="section-title seq-step">⏳ शुभ विवाह में शेष समय</h2>
         <div class="timer-container seq-step">
-            <div class="time-box"><span id="days">00</span>दिन</div>
-            <div class="time-box"><span id="hours">00</span>घंटे</div>
-            <div class="time-box"><span id="minutes">00</span>मिनट</div>
-            <div class="time-box"><span id="seconds">00</span>सेकंड</div>
+            <div class="time-box"><span id="days">00</span><div class="time-label">दिन</div></div>
+            <div class="time-box"><span id="hours">00</span><div class="time-label">घंटे</div></div>
+            <div class="time-box"><span id="minutes">00</span><div class="time-label">मिनट</div></div>
+            <div class="time-box"><span id="seconds">00</span><div class="time-label">सेकंड</div></div>
+        </div>
+        <p id="wedding-status" style="font-size:13px; color:var(--pink-deep); font-weight:600;"></p>
+        <div class="manuhar-box seq-step">
+            ✨ स्नेहिल मनुहार ✨<br>
+            "हल्दी है चंदन है, रिश्तों का बंधन है,<br>
+            हमारे इस शुभ विवाह में आपका सपरिवार अभिनंदन है!"
         </div>
         <div class="detail-pill seq-step"><strong>🙏 दर्शनाभिलाषी:</strong> रामबाबू प्रसाद, प्रतिभारंजन प्रसाद, धनंजय कुमार, अंश कुमार, सोनू कुमार, लकी कुमार एवं समस्त साह परिवार</div>
         <div class="detail-pill seq-step"><strong>🌷 विनीत:</strong> श्री बिभारंजन प्रसाद एवं श्रीमती पूनम देवी</div>
         <div class="seq-step">
             <a href="tel:+917739626426" class="btn-call">📞 कॉल: 7739626426</a>
-            <a href="https://wa.me/918809982107" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+            <a href="https://wa.me/918809982107" target="_blank" rel="noopener" class="btn-whatsapp">💬 WhatsApp</a>
         </div>
-        <div class="detail-pill seq-step" style="background:#fffdf2; border-style:dashed; margin-top:10px;">
-            <span style="font-size:10.5px; color:var(--gold-dark); font-weight:700;">🏢 प्रतिष्ठान / प्रेषक (Our Firm)</span><br>
-            <strong style="color:var(--pink-royal); font-size:13.5px;"></strong><br>
-            <span style="font-size:11.5px; color:#444;"></span>
-        </div>
+        
 
-        <!-- CLIENT USERNAME & PASSWORD PROTECTED GUEST SHARE MENU -->
         <div id="client-share-panel">
             <h4 style="color:var(--pink-royal); font-size:14px; margin-bottom:6px;">💌 मेहमान के नाम से निमंत्रण भेजें</h4>
             <div style="margin-bottom:6px;">
@@ -151,7 +228,7 @@ button { cursor:pointer; font-family:inherit; outline:none; }
         </div>
 
         <footer style="margin-top:12px; padding-top:8px; border-top:1px dashed var(--gold); font-size:12px; color:var(--pink-royal);">
-            ❤️ आपकी उपस्थिति हमारा सौभाग्य है ❤️<br>
+            ❤️ आपकी गरिमामयी उपस्थिति ही हमारा सौभाग्य है ❤️<br>
             <button type="button" id="client-login-toggle" style="background:transparent; border:1px dashed var(--gold); color:#880e4f; padding:3px 10px; border-radius:12px; font-size:11px; margin-top:6px;">🔒 Client / Host Login</button>
 
             <div id="client-login-box">
@@ -170,6 +247,25 @@ button { cursor:pointer; font-family:inherit; outline:none; }
     const ASSIGNED_USER = "Vasundhara";
     const ASSIGNED_PASS = "Vasu@2026";
 
+    const canvas = document.getElementById("sparkle-canvas");
+    const ctx = canvas.getContext("2d");
+    let particles = [];
+    function resizeCanvas(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+    resizeCanvas(); window.addEventListener("resize", resizeCanvas);
+    for(let i=0; i<32; i++){
+        particles.push({ x:Math.random()*canvas.width, y:Math.random()*canvas.height, r:Math.random()*2+0.6, vy:-(Math.random()*0.4+0.1), alpha:Math.random()*0.7+0.2 });
+    }
+    function drawSparkles(){
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+            ctx.fillStyle = "rgba(255, 225, 115, " + p.alpha + ")"; ctx.fill();
+            p.y += p.vy; if(p.y < 0){ p.y = canvas.height; p.x = Math.random()*canvas.width; }
+        });
+        requestAnimationFrame(drawSparkles);
+    }
+    drawSparkles();
+
     const rawGuest = new URLSearchParams(window.location.search).get("guest");
     const guestDisplay = document.getElementById("guest-name-display");
     const doorGuest = document.getElementById("door-guest-line");
@@ -181,7 +277,7 @@ button { cursor:pointer; font-family:inherit; outline:none; }
     }
 
     function startRain(max){
-        const petals = ["🌸","🌺","🌹","✨"];
+        const petals = ["🌸","🌺","🌹","✨","🌷"];
         let c = 0;
         const iv = setInterval(() => {
             if(c >= max){ clearInterval(iv); return; }
@@ -195,21 +291,26 @@ button { cursor:pointer; font-family:inherit; outline:none; }
             f.style.animationDuration = dur + "s";
             document.body.appendChild(f);
             setTimeout(() => f.remove(), dur*1000);
-        }, 250);
+        }, 240);
     }
 
+    const doorsScreen = document.getElementById("doors-screen");
     const music = document.getElementById("weddingMusic");
     const musicBtn = document.getElementById("music-btn");
+    let isOpened = false;
 
     document.getElementById("open-btn").addEventListener("click", function(){
+        if(isOpened) return;
+        isOpened = true;
         document.body.classList.remove("locked");
-        document.getElementById("doors-screen").classList.add("open");
+        doorsScreen.style.pointerEvents = "none";
         document.getElementById("door-center-box").style.opacity = "0";
+        doorsScreen.classList.add("open");
         musicBtn.style.display = "block";
-        music.play().catch(()=>{ musicBtn.textContent = "▶ Music चलाएँ"; });
+        music.play().then(()=>{ musicBtn.textContent = "🔊 Music ON"; }).catch(()=>{ musicBtn.textContent = "▶ Music चलाएँ"; });
         document.querySelectorAll("#page-1 .seq-step").forEach((s, i) => setTimeout(() => s.classList.add("show"), 350 + i * 500));
         startRain(28);
-        setTimeout(() => document.getElementById("doors-screen").style.display = "none", 2200);
+        setTimeout(() => { doorsScreen.style.display = "none"; }, 2200);
     });
 
     musicBtn.addEventListener("click", () => {
@@ -233,15 +334,21 @@ button { cursor:pointer; font-family:inherit; outline:none; }
     const tDate = new Date("2026-12-02T00:00:00").getTime();
     function updateTimer(){
         const diff = tDate - new Date().getTime();
-        if(diff <= 0) return;
-        document.getElementById("days").textContent = Math.floor(diff / 86400000);
-        document.getElementById("hours").textContent = Math.floor((diff / 3600000) % 24);
-        document.getElementById("minutes").textContent = Math.floor((diff / 60000) % 60);
-        document.getElementById("seconds").textContent = Math.floor((diff / 1000) % 60);
+        if(diff <= 0){
+            document.getElementById("wedding-status").textContent = "🎉 शुभ विवाह की मंगल घड़ी आ गई है! 🎉";
+            return;
+        }
+        const dy = Math.floor(diff / 86400000);
+        const hr = Math.floor((diff / 3600000) % 24);
+        const mn = Math.floor((diff / 60000) % 60);
+        const sc = Math.floor((diff / 1000) % 60);
+        document.getElementById("days").textContent = dy < 10 ? "0" + dy : dy;
+        document.getElementById("hours").textContent = hr < 10 ? "0" + hr : hr;
+        document.getElementById("minutes").textContent = mn < 10 ? "0" + mn : mn;
+        document.getElementById("seconds").textContent = sc < 10 ? "0" + sc : sc;
     }
     updateTimer(); setInterval(updateTimer, 1000);
 
-    // Client Username + Password Verification
     const loginToggle = document.getElementById("client-login-toggle");
     const loginBox = document.getElementById("client-login-box");
     const sharePanel = document.getElementById("client-share-panel");
@@ -250,25 +357,13 @@ button { cursor:pointer; font-family:inherit; outline:none; }
     const errMsg = document.getElementById("c-err-msg");
     const gIn = document.getElementById("guest-input");
 
-    loginToggle.addEventListener("click", () => {
-        loginBox.style.display = loginBox.style.display === "block" ? "none" : "block";
-    });
-
+    loginToggle.addEventListener("click", () => { loginBox.style.display = loginBox.style.display === "block" ? "none" : "block"; });
     document.getElementById("c-unlock-btn").addEventListener("click", () => {
         if(uIn.value.trim() === ASSIGNED_USER && pIn.value.trim() === ASSIGNED_PASS){
-            loginBox.style.display = "none";
-            loginToggle.style.display = "none";
-            sharePanel.style.display = "block";
-            errMsg.style.display = "none";
-        } else {
-            errMsg.style.display = "block";
-        }
+            loginBox.style.display = "none"; loginToggle.style.display = "none"; sharePanel.style.display = "block"; errMsg.style.display = "none";
+        } else { errMsg.style.display = "block"; }
     });
-
-    document.getElementById("client-lock-btn").addEventListener("click", () => {
-        sharePanel.style.display = "none";
-        loginToggle.style.display = "inline-block";
-    });
+    document.getElementById("client-lock-btn").addEventListener("click", () => { sharePanel.style.display = "none"; loginToggle.style.display = "inline-block"; });
 
     document.querySelectorAll(".prefix-chip").forEach(chip => {
         chip.addEventListener("click", () => {
@@ -281,10 +376,7 @@ button { cursor:pointer; font-family:inherit; outline:none; }
         });
     });
 
-    function buildLink(name){
-        return window.location.href.split("?")[0].split("#")[0] + "?guest=" + encodeURIComponent(name);
-    }
-
+    function buildLink(name){ return window.location.href.split("?")[0].split("#")[0] + "?guest=" + encodeURIComponent(name); }
     document.getElementById("share-wa-btn").addEventListener("click", () => {
         const name = gIn.value.trim();
         if(!name){ alert("कृपया अतिथि का नाम लिखें!"); return; }
@@ -292,7 +384,6 @@ button { cursor:pointer; font-family:inherit; outline:none; }
         const msg = "🙏 सप्रेम नमस्कार *" + name + " जी*,\n\nआपको *Miss Vasundhara Kumari & Abhishek Kumar Sah* के शुभ विवाह में सपरिवार सादर आमंत्रित किया जाता है।\n\n📍 *विवाह स्थल:* राम जानकी मंदिर, रक्सौल (Ramjanki Mandir, Raxaul)\n\n💌 *आपका व्यक्तिगत निमंत्रण कार्ड यहाँ खोलें:*\n" + link;
         window.location.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(msg);
     });
-
     document.getElementById("copy-link-btn").addEventListener("click", () => {
         const name = gIn.value.trim();
         if(!name){ alert("कृपया अतिथि का नाम लिखें!"); return; }
