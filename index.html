@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>शुभ विवाह - Miss Vasundhara Kumari ❤️ Abhishek Kumar Sah</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root { --pink-royal:#7b003a; --pink-deep:#9c0d4b; --pink-bright:#ad1457; --gold:#d4af37; --gold-light:#ffeb99; --gold-dark:#8c6200; }
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { width:100%; min-height:100%; background:radial-gradient(circle at center, #6a0032 0%, #380018 60%, #1f000d 100%); color:#2c0014; font-family:'Noto Sans Devanagari','Poppins',sans-serif; font-size:13.5px; text-align:center; overflow-x:hidden; scroll-behavior:smooth; }
+body.locked { overflow:hidden; height:100vh; }
+button { cursor:pointer; font-family:inherit; outline:none; }
+#doors-screen { position:fixed; inset:0; width:100%; height:100%; z-index:9999; display:flex; perspective:1600px; }
+.door { width:50%; height:100%; background:linear-gradient(135deg, #9c0d4b 0%, #6a0032 55%, #2a0015 100%); border:5px solid var(--gold); transition:transform 2.2s ease; }
+.door-left { transform-origin:left center; border-right:3px solid var(--gold-light); }
+.door-right { transform-origin:right center; border-left:3px solid var(--gold-light); }
+#doors-screen.open .door-left { transform:rotateY(-110deg); }
+#doors-screen.open .door-right { transform:rotateY(110deg); }
+#door-center-box { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10001; width:88%; max-width:340px; background:#5a002c; border:2.5px solid var(--gold-light); border-radius:22px; padding:22px 16px; color:#fff; box-shadow:0 0 35px rgba(255,215,0,0.6); transition:opacity 0.4s ease; }
+#open-btn { background:linear-gradient(45deg, #d4af37, #fff6b5); color:#3b001b; border:2px solid #fff; border-radius:50px; padding:10px 26px; font-size:15px; font-weight:700; margin-top:10px; }
+#main-content { max-width:580px; margin:0 auto; padding:14px 10px 45px 10px; }
+.royal-page-card { background:radial-gradient(circle at top, #ffffff 0%, #fff4f8 70%, #ffe9f2 100%); border:3px solid var(--gold); border-radius:20px; padding:18px 14px; margin-bottom:16px; box-shadow:0 10px 28px rgba(0,0,0,0.45); overflow:hidden; }
+.seq-step { opacity:0; transform:translateY(16px); transition:all 0.6s ease; }
+.seq-step.show { opacity:1; transform:translateY(0); }
+.ganesh-auto-box { width:5cm; height:5cm; max-width:130px; max-height:130px; margin:8px auto; border-radius:50%; border:3px solid var(--gold); overflow:hidden; background:#fff; display:flex; align-items:center; justify-content:center; padding:4px; box-shadow:0 0 15px rgba(212,175,55,0.75); }
+.om-image { width:100%; height:100%; border-radius:50%; object-fit:contain; }
+.mantra-box { background:#ffeef4; border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-right:4px solid var(--pink-bright); padding:8px; margin:8px auto; border-radius:10px; font-size:12.5px; line-height:1.6; color:var(--pink-royal); font-weight:600; }
+.profile-img-box { width:110px; height:110px; margin:8px auto; border-radius:50%; border:3px solid var(--gold); overflow:hidden; background:#fff0f5; }
+.profile-img { width:100%; height:100%; object-fit:cover; }
+.detail-pill { background:#fff; border:1px solid var(--gold); border-radius:10px; padding:8px 10px; margin:6px auto; font-size:12.5px; line-height:1.55; }
+.event-card { background:#fff; border:1px solid var(--gold); border-left:4px solid var(--pink-bright); border-radius:10px; padding:9px 12px; margin:7px auto; text-align:left; }
+.event-name { font-size:13.5px; color:var(--pink-royal); font-weight:700; }
+.event-date { font-size:12px; color:#5d2a42; }
+.timer-container { display:flex; justify-content:center; gap:8px; margin:10px 0; }
+.time-box { background:var(--pink-royal); color:#fff; border:1.5px solid var(--gold); padding:8px 6px; border-radius:10px; min-width:56px; }
+.time-box span { display:block; font-size:18px; font-weight:700; color:var(--gold-light); }
+.btn-call { display:inline-block; background:var(--pink-bright); color:#fff; text-decoration:none; padding:8px 15px; border-radius:30px; font-size:12.5px; font-weight:600; margin:4px; border:none; }
+.btn-whatsapp { display:inline-block; background:#128C7E; color:#fff; text-decoration:none; padding:8px 15px; border-radius:30px; font-size:12.5px; font-weight:600; margin:4px; border:none; }
+.btn-gold { display:inline-block; background:#996515; color:#fff; text-decoration:none; padding:7px 14px; border-radius:30px; font-size:12px; font-weight:600; margin:4px; border:none; }
+.input-field { padding:8px 10px; border:1.5px solid var(--gold); border-radius:8px; width:90%; max-width:260px; font-size:12.5px; text-align:center; margin-bottom:6px; }
+.prefix-chip { background:#fff; border:1px solid var(--gold-dark); color:var(--pink-royal); padding:3px 8px; border-radius:12px; font-size:11px; font-weight:600; margin:2px; }
+#client-login-box, #client-share-panel { display:none; background:#fff0f6; border:1.5px solid var(--gold); border-radius:12px; padding:12px 10px; margin:10px auto; max-width:330px; }
+#music-btn { position:fixed; bottom:14px; right:14px; z-index:900; background:var(--pink-bright); color:#fff; border:1.5px solid var(--gold); padding:7px 13px; border-radius:30px; font-size:12px; font-weight:600; display:none; }
+.flower { position:fixed; top:-30px; z-index:9000; pointer-events:none; animation:fall linear forwards; }
+@keyframes fall { 0% { transform:translateY(0) rotate(0deg); opacity:1; } 100% { transform:translateY(105vh) rotate(360deg); opacity:0; } }
+</style>
+</head>
+<body class="locked">
+<div id="doors-screen">
+    <div class="door door-left"></div><div class="door door-right"></div>
+    <div id="door-center-box">
+        <div style="font-size:26px;">👑</div>
+        <h2 style="color:var(--gold-light); font-size:21px;">॥ शुभ विवाह ॥</h2>
+        <p style="margin:5px 0; font-size:14px; color:#ffe57f;">Miss Vasundhara Kumari & Abhishek Kumar Sah</p>
+        <p id="door-guest-line" style="font-size:12px; color:#fff; margin-bottom:8px;">सप्रेम निमंत्रण</p>
+        <button id="open-btn" type="button">🚪 निमंत्रण खोलें</button>
+    </div>
+</div>
+<audio id="weddingMusic" loop preload="auto"><source src="music.mp3" type="audio/mpeg"></audio>
+<button id="music-btn" type="button">🔊 Music ON</button>
+<main id="main-content">
+    <section class="royal-page-card" id="page-1">
+        <div id="guest-greeting" class="seq-step" style="background:var(--pink-royal); color:#fff; padding:10px; border-radius:12px; margin-bottom:10px; border:1.5px solid var(--gold);">
+            <div style="font-size:11.5px; color:var(--gold-light);">✨ सप्रेम सादर आमंत्रण ✨</div>
+            <strong id="guest-name-display" style="font-size:17px; color:#ffeb99;">माननीय अतिथि महोदय</strong>
+            <div style="font-size:11.5px; color:#ffeef5;">आप सपरिवार सादर आमंत्रित हैं।</div>
+        </div>
+        <div class="ganesh-auto-box seq-step"><img src="om.png" class="om-image" alt="Ganesh"></div>
+        <div class="seq-step" style="font-weight:700; color:var(--pink-royal); font-size:15px; margin:4px 0;">🪔 ॥ श्री गणेशाय नमः ॥ 🪔</div>
+        <div class="mantra-box seq-step">॥ वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥</div>
+        <div class="mantra-box seq-step">॥ मंगलम भगवान विष्णुः मंगलम गरुड़ध्वजः ।<br>मंगलम पुण्डरीकाक्षः मंगलाय तनो हरिः ॥</div>
+        <div class="seq-step"><h1 style="color:var(--pink-bright); font-size:22px; margin-top:6px;">शुभ विवाह</h1><p style="font-size:12.5px; line-height:1.6;">ईश्वर की असीम कृपा एवं बुजुर्गों के आशीर्वाद से हमारे परिवार में शुभ विवाह का पावन अवसर आया है। कृपया सपरिवार पधारकर नवयुगल को आशीर्वाद दें।</p></div>
+    </section>
+
+    
+    <section class="royal-page-card stagger-sec">
+        <h3 class="seq-step" style="color:var(--pink-royal); font-size:15px;">👰 प्रथम परिचय: आयु. वधू (The Bride)</h3>
+        <div class="profile-img-box seq-step"><img src="bride.jpg" class="profile-img" alt="Bride"></div>
+        <div class="seq-step" style="font-size:17px; font-weight:700; color:var(--pink-royal);">Miss Vasundhara Kumari</div>
+        <div class="seq-step" style="font-size:13.5px; color:var(--gold-dark); font-weight:600;">(आयु. वसुंधरा कुमारी)</div>
+        <div class="detail-pill seq-step"><strong>👨‍👩‍👧 सुपुत्री:</strong> श्री बिभारंजन प्रसाद एवं श्रीमती पूनम देवी</div>
+        <div class="detail-pill seq-step"><strong>🏠 पता:</strong> वार्ड नं. 05, बलथर, पश्चिम चंपारण, बिहार - 845307</div>
+    </section>
+
+    <section class="royal-page-card stagger-sec">
+        <h3 class="seq-step" style="color:var(--pink-royal); font-size:15px;">🤵 द्वितीय परिचय: चि. वर (The Groom)</h3>
+        <div class="profile-img-box seq-step"><img src="groom.jpg" class="profile-img" alt="Groom"></div>
+        <div class="seq-step" style="font-size:17px; font-weight:700; color:var(--pink-royal);">Abhishek Kumar Sah</div>
+        <div class="seq-step" style="font-size:13.5px; color:var(--gold-dark); font-weight:600;">(चि. अभिषेक कुमार साह)</div>
+        <div class="detail-pill seq-step"><strong>👨‍👩‍👦 सुपुत्र:</strong> श्री सोनालाल साह एवं श्रीमती उमरावती देवी</div>
+        <div class="detail-pill seq-step"><strong>🏠 पता:</strong> मौजे, वार्ड नं. 13, माई स्थान रोड, रक्सौल, पूर्वी चंपारण, बिहार - 845305</div>
+    </section>
+
+    <section class="royal-page-card stagger-sec" id="couple-together" style="background:radial-gradient(circle, #9c0d4b 0%, #4a0022 100%); color:#fff;">
+        <p class="seq-step" style="color:var(--gold-light); font-size:13px;">✨ जन्म-जन्मांतर का पावन गठबंधन ✨</p>
+        <div class="seq-step" style="display:flex; justify-content:center; align-items:center; gap:12px; margin:10px 0;">
+            <img src="bride.jpg" style="width:78px; height:78px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold-light);">
+            <span style="font-size:24px;">❤️</span>
+            <img src="groom.jpg" style="width:78px; height:78px; border-radius:50%; object-fit:cover; border:2.5px solid var(--gold-light);">
+        </div>
+        <div class="seq-step" style="font-size:18px; font-weight:700; color:var(--gold-light);">Miss Vasundhara Kumari & Abhishek Kumar Sah</div>
+        <button type="button" id="bless-btn" class="btn-gold" style="margin-top:8px;">🌸 पुष्प वर्षा करें 🌸</button>
+    </section>
+
+    <section class="royal-page-card stagger-sec">
+        <h3 class="seq-step" style="color:var(--pink-royal); font-size:16px; margin-bottom:8px;">🌸 मांगलिक कार्यक्रम 🌸</h3>
+        <div class="event-card seq-step"><div class="event-name">🚩 अष्टयाम</div><div class="event-date">📅 सोमवार, 30 दिसंबर 2026</div></div>
+<div class="event-card seq-step"><div class="event-name">📖 कथा एवं मटकोर</div><div class="event-date">📅 मंगलवार, 01 दिसंबर 2026</div></div>
+<div class="event-card seq-step"><div class="event-name">💍 शुभ विवाह</div><div class="event-date">📅 बुधवार, 02 दिसंबर 2026</div></div>
+        <div class="detail-pill seq-step" style="background:#fff5f8;">
+            <strong style="color:var(--pink-royal);">📍 विवाह स्थल:</strong><br>राम जानकी मंदिर, रक्सौल (Ramjanki Mandir, Raxaul)<br>
+            <a href="https://www.google.com/maps/search/?api=1&query=%E0%A4%B0%E0%A4%BE%E0%A4%AE%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A5%80%20%E0%A4%AE%E0%A4%82%E0%A4%A6%E0%A4%BF%E0%A4%B0%2C%20%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B8%E0%A5%8C%E0%A4%B2%20(Ramjanki%20Mandir%2C%20Raxaul)" target="_blank" class="btn-gold" style="margin-top:6px;">🗺️ Google Maps</a>
+        </div>
+    </section>
+
+    <section class="royal-page-card stagger-sec">
+        <h3 class="seq-step" style="color:var(--pink-royal); font-size:16px;">⏳ शुभ विवाह में शेष समय</h3>
+        <div class="timer-container seq-step">
+            <div class="time-box"><span id="days">00</span>दिन</div>
+            <div class="time-box"><span id="hours">00</span>घंटे</div>
+            <div class="time-box"><span id="minutes">00</span>मिनट</div>
+            <div class="time-box"><span id="seconds">00</span>सेकंड</div>
+        </div>
+        <div class="detail-pill seq-step"><strong>🙏 दर्शनाभिलाषी:</strong> रामबाबू प्रसाद, प्रतिभारंजन प्रसाद, धनंजय कुमार, अंश कुमार, सोनू कुमार, लकी कुमार एवं समस्त साह परिवार</div>
+        <div class="detail-pill seq-step"><strong>🌷 विनीत:</strong> श्री बिभारंजन प्रसाद एवं श्रीमती पूनम देवी</div>
+        <div class="seq-step">
+            <a href="tel:+917739626426" class="btn-call">📞 कॉल: 7739626426</a>
+            <a href="https://wa.me/918809982107" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+        </div>
+        <div class="detail-pill seq-step" style="background:#fffdf2; border-style:dashed; margin-top:10px;">
+            <span style="font-size:10.5px; color:var(--gold-dark); font-weight:700;">🏢 प्रतिष्ठान / प्रेषक (Our Firm)</span><br>
+            <strong style="color:var(--pink-royal); font-size:13.5px;"></strong><br>
+            <span style="font-size:11.5px; color:#444;"></span>
+        </div>
+
+        <!-- CLIENT USERNAME & PASSWORD PROTECTED GUEST SHARE MENU -->
+        <div id="client-share-panel">
+            <h4 style="color:var(--pink-royal); font-size:14px; margin-bottom:6px;">💌 मेहमान के नाम से निमंत्रण भेजें</h4>
+            <div style="margin-bottom:6px;">
+                <button type="button" class="prefix-chip" data-prefix="श्री ">+ श्री</button>
+                <button type="button" class="prefix-chip" data-prefix="श्रीमती ">+ श्रीमती</button>
+                <button type="button" class="prefix-chip" data-suffix=" एवं परिवार">+ एवं परिवार</button>
+            </div>
+            <input type="text" id="guest-input" class="input-field" placeholder="अतिथि का नाम लिखें">
+            <br>
+            <button type="button" class="btn-whatsapp" id="share-wa-btn">📲 WhatsApp पर भेजें</button>
+            <button type="button" class="btn-gold" id="copy-link-btn">🔗 लिंक कॉपी</button>
+            <br>
+            <button type="button" id="client-lock-btn" style="background:none; border:none; color:var(--pink-royal); font-size:11.5px; margin-top:6px; text-decoration:underline;">🔒 लॉक करें</button>
+        </div>
+
+        <footer style="margin-top:12px; padding-top:8px; border-top:1px dashed var(--gold); font-size:12px; color:var(--pink-royal);">
+            ❤️ आपकी उपस्थिति हमारा सौभाग्य है ❤️<br>
+            <button type="button" id="client-login-toggle" style="background:transparent; border:1px dashed var(--gold); color:#880e4f; padding:3px 10px; border-radius:12px; font-size:11px; margin-top:6px;">🔒 Client / Host Login</button>
+
+            <div id="client-login-box">
+                <p style="font-size:12px; margin-bottom:6px; font-weight:600;">🔑 मेहमान लिंक बनाने के लिए Username व Password डालें:</p>
+                <input type="text" id="c-user-in" class="input-field" placeholder="Username">
+                <input type="password" id="c-pass-in" class="input-field" placeholder="Password">
+                <br>
+                <button type="button" class="btn-call" id="c-unlock-btn" style="padding:5px 14px; font-size:12px;">Unlock</button>
+                <div id="c-err-msg" style="color:#c62828; font-size:11.5px; display:none; margin-top:4px;">❌ गलत Username या Password!</div>
+            </div>
+        </footer>
+    </section>
+</main>
+<script>
+(function(){
+    const ASSIGNED_USER = "Vasundhara";
+    const ASSIGNED_PASS = "Vasu@2026";
+
+    const rawGuest = new URLSearchParams(window.location.search).get("guest");
+    const guestDisplay = document.getElementById("guest-name-display");
+    const doorGuest = document.getElementById("door-guest-line");
+    if(rawGuest && rawGuest.trim() !== ""){
+        const clean = decodeURIComponent(rawGuest).replace(/[-_+]/g, " ").trim();
+        const fmt = clean.endsWith("जी") ? "प्रिय " + clean : "प्रिय " + clean + " जी";
+        guestDisplay.textContent = fmt;
+        doorGuest.textContent = "स्वागतम्: " + fmt;
+    }
+
+    function startRain(max){
+        const petals = ["🌸","🌺","🌹","✨"];
+        let c = 0;
+        const iv = setInterval(() => {
+            if(c >= max){ clearInterval(iv); return; }
+            c++;
+            const f = document.createElement("div");
+            f.className = "flower";
+            f.textContent = petals[Math.floor(Math.random()*petals.length)];
+            f.style.left = (Math.random()*90) + "vw";
+            f.style.fontSize = (14 + Math.random()*10) + "px";
+            const dur = 3 + Math.random()*2;
+            f.style.animationDuration = dur + "s";
+            document.body.appendChild(f);
+            setTimeout(() => f.remove(), dur*1000);
+        }, 250);
+    }
+
+    const music = document.getElementById("weddingMusic");
+    const musicBtn = document.getElementById("music-btn");
+
+    document.getElementById("open-btn").addEventListener("click", function(){
+        document.body.classList.remove("locked");
+        document.getElementById("doors-screen").classList.add("open");
+        document.getElementById("door-center-box").style.opacity = "0";
+        musicBtn.style.display = "block";
+        music.play().catch(()=>{ musicBtn.textContent = "▶ Music चलाएँ"; });
+        document.querySelectorAll("#page-1 .seq-step").forEach((s, i) => setTimeout(() => s.classList.add("show"), 350 + i * 500));
+        startRain(28);
+        setTimeout(() => document.getElementById("doors-screen").style.display = "none", 2200);
+    });
+
+    musicBtn.addEventListener("click", () => {
+        if(music.paused){ music.play(); musicBtn.textContent = "🔊 Music ON"; }
+        else { music.pause(); musicBtn.textContent = "🔇 Music OFF"; }
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if(e.isIntersecting){
+                e.target.querySelectorAll(".seq-step").forEach((s, i) => setTimeout(() => s.classList.add("show"), i * 240));
+                if(e.target.id === "couple-together") startRain(25);
+                obs.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".stagger-sec").forEach(sec => obs.observe(sec));
+
+    document.getElementById("bless-btn").addEventListener("click", () => startRain(25));
+
+    const tDate = new Date("2026-12-02T00:00:00").getTime();
+    function updateTimer(){
+        const diff = tDate - new Date().getTime();
+        if(diff <= 0) return;
+        document.getElementById("days").textContent = Math.floor(diff / 86400000);
+        document.getElementById("hours").textContent = Math.floor((diff / 3600000) % 24);
+        document.getElementById("minutes").textContent = Math.floor((diff / 60000) % 60);
+        document.getElementById("seconds").textContent = Math.floor((diff / 1000) % 60);
+    }
+    updateTimer(); setInterval(updateTimer, 1000);
+
+    // Client Username + Password Verification
+    const loginToggle = document.getElementById("client-login-toggle");
+    const loginBox = document.getElementById("client-login-box");
+    const sharePanel = document.getElementById("client-share-panel");
+    const uIn = document.getElementById("c-user-in");
+    const pIn = document.getElementById("c-pass-in");
+    const errMsg = document.getElementById("c-err-msg");
+    const gIn = document.getElementById("guest-input");
+
+    loginToggle.addEventListener("click", () => {
+        loginBox.style.display = loginBox.style.display === "block" ? "none" : "block";
+    });
+
+    document.getElementById("c-unlock-btn").addEventListener("click", () => {
+        if(uIn.value.trim() === ASSIGNED_USER && pIn.value.trim() === ASSIGNED_PASS){
+            loginBox.style.display = "none";
+            loginToggle.style.display = "none";
+            sharePanel.style.display = "block";
+            errMsg.style.display = "none";
+        } else {
+            errMsg.style.display = "block";
+        }
+    });
+
+    document.getElementById("client-lock-btn").addEventListener("click", () => {
+        sharePanel.style.display = "none";
+        loginToggle.style.display = "inline-block";
+    });
+
+    document.querySelectorAll(".prefix-chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+            const p = chip.dataset.prefix || "", s = chip.dataset.suffix || "";
+            let v = gIn.value.trim();
+            if(p && !v.startsWith(p.trim())) v = p + v;
+            if(s && !v.endsWith(s.trim())) v = v + s;
+            gIn.value = v;
+            guestDisplay.textContent = "प्रिय " + v + " जी";
+        });
+    });
+
+    function buildLink(name){
+        return window.location.href.split("?")[0].split("#")[0] + "?guest=" + encodeURIComponent(name);
+    }
+
+    document.getElementById("share-wa-btn").addEventListener("click", () => {
+        const name = gIn.value.trim();
+        if(!name){ alert("कृपया अतिथि का नाम लिखें!"); return; }
+        const link = buildLink(name);
+        const msg = "🙏 सप्रेम नमस्कार *" + name + " जी*,\n\nआपको *Miss Vasundhara Kumari & Abhishek Kumar Sah* के शुभ विवाह में सपरिवार सादर आमंत्रित किया जाता है।\n\n📍 *विवाह स्थल:* राम जानकी मंदिर, रक्सौल (Ramjanki Mandir, Raxaul)\n\n💌 *आपका व्यक्तिगत निमंत्रण कार्ड यहाँ खोलें:*\n" + link;
+        window.location.href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(msg);
+    });
+
+    document.getElementById("copy-link-btn").addEventListener("click", () => {
+        const name = gIn.value.trim();
+        if(!name){ alert("कृपया अतिथि का नाम लिखें!"); return; }
+        navigator.clipboard.writeText(buildLink(name)).then(() => alert("लिंक कॉपी हो गया!"));
+    });
+})();
+</script>
+</body>
+</html>
